@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>DDR - SAMISDAT - Technische Realisierung</title>
+</head>
+<body>
+<div id="bluepage_content">
+ <a name="130">
+ </a>
+ <div class="hr_line">
+  <hr noshade="noshade"/>
+ </div>
+ <div class="templ_table">
+  <div class="templ_tr">
+   <div class="templ_td_templ">
+    <h1>
+     &gt;Editorische und technische Realisierung
+    </h1>
+   </div>
+  </div>
+ </div>
+ <div class="templ_end">
+  <div class="space10">
+  </div>
+ </div>
+ <a name="131">
+ </a>
+ <div class="hr_line">
+  <hr noshade="noshade"/>
+ </div>
+ <div class="templ_table">
+  <div class="templ_tr">
+   <div class="templ_td_templ">
+    <div class="box_txt">
+     Drei grundsätzliche Ziele, die mit der editorischen Aufbereitung dieses Bestandes verknüpft waren, legten eine elektronische Text-Bild-Edition nahe, die zunächst auf CD-ROM geplant, dann als Online-Version realisiert wurde:
+     <br/>
+     Die Heterogenität der medialen Arrangements und die Bedeutung, die der Materialität der Zeichenträger in den Heften zukommt und die vielfältigen Text-Bild-Beziehungen legten eine faksimileartige Wiedergabe des Befundes nahe. Nur auf diese Weise wird es dem Benutzer ermöglicht, die Hefte tatsächlich zu rezipieren, d.h. in ihrem intermedialen Status wahrzunehmen.
+     <br/>
+     Eine elektronische Lektüre gestützt durch eine inhaltliche Aufbereitung durch Indices, Schlagwörter und bio-bibliographischen Daten soll die Orientierung in dem unübersichtlichen Quellenbestand (27 Heftreihen, 260 Einzelhefte, ca. 10000 Seiten, 8000 Einzelbeiträge von 600 Künstler- und AutorInnen) erleichtern und damit der kulturwissenschaftlichen Forschung ein leistungsstarkes elektronisches Werkzeug zur Verfügung stellen.
+     <br/>
+     Da sich das Basismaterial der Zeichenträger zum Teil bereits in Auflösung befindet und andererseits Typoskripte und Autographen zu verbleichen beginnen, war die Edition auch aus Bestandserhaltungsgründen geboten. Der Gesamtbestand wurde also verfilmt; eine Kopie wanderte ins Archiv, die andere diente als Basis der Digitalisierung.
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="templ_end">
+  <div class="space1_5em">
+  </div>
+ </div>
+ <a name="132">
+ </a>
+ <div class="hr_line">
+  <hr noshade="noshade"/>
+ </div>
+ <div class="templ_table">
+  <div class="templ_tr">
+   <div class="templ_td_templ">
+    <div class="p_space">
+    </div>
+    <h2>
+     Realisierung und Recherchemöglichkeiten
+    </h2>
+    <div class="box_txt">
+     Die eigentliche technische Herausforderung bei der Umsetzung der Zielsetzung des Projekts stellte die Verbindung von Edition (Vermittlung des visuellen Eindrucks des Einzelheftes und der Einzelseite) auf der einen und einer Datenbankfunktion (schnelle, durch Boolesche Operatoren unterstützte Recherche nach den Erschließungsdaten) auf der anderen Seite dar. Die technologische Lösung des Problems wurde durch die indexalische Einbindung einer Oracledatenbank in das Dokument-Mangement-System (DMS) Agora erreicht, welches die Digitalisate der Hefte als elektronische Bücher verwaltet und über einen beliebigen HTML-Browser angesprochen werden kann.
+     <br/>
+     Bei dem DMS Agora, daß von der Firma Satz-Rechenzentrum-Berlin in Zusammenarbeit mit dem Digitalisierungszentrum der Universität Göttingen entwickelt wurde, handelt es sich um eine in Javascript programmierte Anwendung zur Verwaltung unterschiedlichster Datenformate und Datenbanken sowie ihrer Präsentation im Internet.
+     <br/>
+     Im Grunde sind es drei Vorteile, die für die Verwendung dieser Softwarelösung sprachen. Zum einen ist da die völlige technische Offenheit des Systems: es ist unerheblich aus welchem Bereich die Digitalisate stammen. Text, Bild, Ton und Videodokumente können vernetzt werden. Zum zweiten können die verwalteten Dokumente in ihren Eingabeformaten wieder aus dem System exportiert werden, was die Anschlußfähigkeit an die Entwicklungsfortschritte internationaler Softwareanbieter sicherstellt und damit die Möglichkeit der Datenpflege über längere Zeiträume garantiert. Drittens können Daten auf beliebigen Ausgabemedien – Internet, Intranet, CD-ROM, DVD, digitaler Druck, Offsetdruck – distribuiert werden.
+     <br/>
+     Das besondere der Anwendung für das Künstlerzeitschriften-Projekt liegt nun darin, daß neben statischen auch dynamische HTML-Seiten generiert werden können. Damit ist sichergestellt, daß die Zeitschriftenhefte bei Anfragen, die über die Recherchefunktion generiert werden, gewissermaßen zu Quellen für beliebige Trefferlisten werden. Darüber hinaus besteht die Möglichkeit der Volltextsuche in den Metadaten der Oracledatenbank.
+     <br/>
+     Für die BenutzerInnen der Anwendung bedeutet diese Lösung, daß sie zwei Einstiege in die Quellen geboten bekommen.
+     <br/>
+     Auf der einen Seite können sie sich über eine alphabetisierte Heftliste bis zu einem Inhaltsverzeichnis durchklicken und dann die Einzelhefte wie im Lesesaal durchblättern und meistens, jedenfalls unter der Zuhilfenahme der Zoomfunktion, lesen. Die Metainformationen, die vom Editor kommen, können dergestalt am Befund geprüft werden (Edition der elektronischen Bücher).
+     <br/>
+     Auf der anderen Seite können sie über eine Suchmaske nach Autoren, Titel, Erscheinungsjahr und –ort sowie Schlagwörtern recherchieren, die über Boolesche Operatoren verknüpfbar sind und durch Indexlisten transparent gemacht werden (Datenbank der Metadaten der Erschließung).
+     <br/>
+     Recherchen führen zu Trefferlisten von Einzelbeiträgen von Autoren und Künstlern in den verschiedenen Heften, welche dann durch Mausklick unmittelbar angesteuert werden können. Vom Einzeltreffer kann auf der Ebene der Einzelseiten dann wie in der Edition zum nächsten Beitrag geblättert werden, wobei die zum neuen Beitrag gehörenden Metadaten aufgeblendet werden. An dieser Stelle ist also eine Navigation vom Recherche zum Editionsmodus möglich.
+    </div>
+    <div class="box_txt">
+     <a class="link_in" href="index.php@whl=13020300&amp;lg=de&amp;ank=130.html#130" title="Lokaler Link: nach oben">
+      nach oben
+     </a>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="templ_end">
+  <div class="space1_5em">
+  </div>
+ </div>
+ <a name="133">
+ </a>
+ <div class="hr_line">
+  <hr noshade="noshade"/>
+ </div>
+ <div class="templ_table">
+  <div class="templ_tr">
+   <div class="templ_td_templ">
+    <div class="p_space">
+    </div>
+    <h2>
+     Leistungsfähigkeit, Grenzen und Anschlußfähigkeit des Editionsverfahrens.
+    </h2>
+    <div class="box_txt">
+     Leistungsfähigkeit und Grenzen.
+     <br/>
+     Bei einer Diskussion der Leistungsfähigkeit und der Grenzen dieser elektronischen Edition kann man beobachten, wie die neue Technik des wissenschaftlichen Arbeitens einerseits alte Probleme der Editionstheorie neu akzentuiert aber darüber hinaus auch neue Fragestellungen, Interpretationsmuster und Erkenntnisziele aufkommen läßt.
+     <br/>
+     Da ist zunächst das alte, von Hans Zeller vor drei Jahrzehnten analysierte editionstheoretische Problem von Befund und Deutung in Bezug auf die inhaltliche Verschlagwortung des Bestandes.
+     <br/>
+     Die inhaltliche Verschlagwortung des Bestandes bezieht ihre Kriterien weitgehend aus der Struktur des Bestandes, aus der seit den 80er Jahren einsetzenden Forschung zur Gegenkultur der DDR sowie aus der Transformationsforschung, die sich mit Problemstellungen beim Übergang von realsozialistischen zu marktwirtschaftlichen Gesellschaftssystemen nach 1989 beschäftigt. Das besondere Problem der inhaltlichen Erschließung der in Frage stehenden Quellen besteht in der Tatsache, daß die an den Heften mitarbeitenden Künstler und Autoren mit ästhetischen Verfahren arbeiten (experimentelle Poesie im weitesten Sinne, Objektkunst), die formale Spezifika der Artefakte zur eigentlichen Botschaft werden lassen. Diese Verfahrensweise ist aus den Avantgardebewegungen des 20. Jahrhunderts bekannt und reiht die Artefakte dergestalt in eine intertextuelle Kette ein. Ein Einzelbeitrag enthält über das Verschlagwortungssystem idealtypischerweise Informationen über folgende Felder:
+     <br/>
+     Ästhetischer Status/Gattung; Materialität der Zeichen; Texttopographischer Status; Sprachliche Funktion/ Rhetorische Mittel; Intermediale Bezüge; Intertextuelle Bezüge; Verortung in der Gegenkultur der DDR über Personen, Institutionen oder Orte.
+     <br/>
+     Die Metadaten der Edition liefern so auf der einen Seite geographische, biographische und historische Informationen, die die regionale Segmentierung der Gegenkultur ebenso sichtbar machen wie die Anteile verschiedener Künstler- und AutorInnen. Gruppenbildungen und Migrationsbewegungen werden nachvollziehbar, Stilkonstanten und Einflüsse besonders auch aus den Avantgardebewegungen des 20. Jahrhunderts und der Postmoderne werden belegbar, Zensur und Eingriffsversuche der Staatsmacht werden dokumentiert. Die ästhetische Gegenkultur der 80er Jahre in der DDR generiert so einen ästhetischen und sozialen Palimpsest, dessen soziale Funktion sich in erster Linie als Subversion, nicht als politische Opposition, beschreiben läßt. Es geht um die Propagierung alles dessen auf dem Feld der Künste, was der offiziellen, als kleinbürgerlich-verklemmt erlebten Kulturpolitik, als überwunden, degeneriert oder elitär-reaktionär galt.
+     <br/>
+     Natürlich verdankt sich diese erkenntnis- und kommentarleitende These ein Stück weit der Programmatik der Edition. Durch die neuen elektronischen Medien ist es jedoch möglich, zumindest was den optischen Eindruck angeht, den Befund des Orginals stets kritisch vor Augen zu haben. Überdies kann der Benutzer der Edition über eine Liste des gesamten Schlagwortbestandes mögliche Inkonsistenzen im Schlagwortbestand erkennen.
+     <br/>
+     Gleiches gilt für extrem komplexe Probleme der Texttopographie, Segmentierungsfragen sowie des Status von Zeichenclustern, deren Status zwischen Text und Bild changiert; das neue Medium demokratisiert den Zugang zum textkritischen Befund und setzt editorische Entscheidungen unter Begründungsdruck.
+     <br/>
+     An die Leistungsgrenze des vorgestellten Editionskonzepts führt die Frage nach der Integration einer Volltextkomponente in die Edition komplexer handschriftlicher Überlieferungszusammenhänge und archivalischer Quellenbestände einzelner oder mehrerer. Die Erstellung eines Volltexts, der obendrein auch noch die texttopographischen Zusammenhänge zu repräsentieren hätte, gestaltet sich bekanntlich vorerst sehr aufwendig, wobei eine entlinearisierte texttopographische Darstellung in einer diplomatischen Umschrift zunächst auch als Bilddatei vorläge. Um eine Volltext-Edition der in Frage stehenden Bestände zu erreichen, müßte das Material nicht nur in eine, sondern auf zwei Ebenen, Volltext und diplomatische Umschrift zusätzlich aufbereitet werden, was im Förderungsrahmen nicht realisierbar war.
+     <br/>
+     <br/>
+     Anschlußfähigkeit
+     <br/>
+     Das von uns entwickelte Verfahren erlaubt es zum einen, zum gegebenen Zeitpunkt weitere Zeitschriftenkollektionen oder andere Medien der Subkultur der DDR (Künstlerbücher, Filme) zu integrieren. Das Konzept könnte in diesem Zusammenhang für die Edition des Gesamtbestands der Quellen des DDR-Samisdat von Bedeutung sein. Mit der Umweltbibliothek Großhennersdorf in Sachsen, die federführend in letzteres Projekt eingebunden ist, wurde bereits Kontakt aufgenommen. Ein erster Erfahrungsaustausch fand bei einem Expertengespräch am 13.11.2000 in Großhennersdorf statt. Allerdings sind weitere Aktivitäten auf diesem Feld abhängig von einer erneuten Förderung durch Drittmittelgeber.
+     <br/>
+     Das gewählte Editionsverfahren führt aber auch unabhängig vom Kontext der Erforschung der Gegenkultur der DDR zu einem methodischen Neuansatz, der über eine autorzentrierte Editionsphilologie hinausweist und einer, an der Rekonstruktion kultureller Kommunikationsprozesse interessierten Literaturwissenschaft archivalische Massendaten, umfassende Briefwechsel und handschriftliche Nachlaßkonvolute, zuführen kann.
+     <br/>
+     <br/>
+     Dr. Helmut Mottel
+    </div>
+    <div class="box_txt">
+     <a class="link_in" href="index.php@whl=13020300&amp;lg=de&amp;ank=130.html#130" title="Lokaler Link: nach oben">
+      nach oben
+     </a>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="templ_end">
+  <div class="space1_5em">
+  </div>
+ </div>
+</div>
+
+</body>
+</html>
+                    
