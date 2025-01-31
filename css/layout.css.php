@@ -153,16 +153,14 @@ h1 {
     color: #000;
 }
 
-.bluepage_bnr_txt, .bluepage_bnr_head_c {
+.bluepage_bnr_txt, .bluepage_bnr_img, .bluepage_bnr_head_a, .bluepage_bnr_head_b, .bluepage_bnr_head_c {
     text-align: right;
     margin-left: 900px;
     margin-right: 600px;
     font-size: 18px;
     font-family: EB_Garamond, Lustria, Cormorant_Garamond, serif;
 }
-.bluepage_bnr_txt {
-    padding-bottom: 100px;
-}
+
 
 
 
@@ -174,7 +172,7 @@ h1 {
     padding: 10px;
     padding-top: 30px;
     color: var(--text-color);
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
     right: 0;
