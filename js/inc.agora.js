@@ -22,31 +22,31 @@
 /* Copyright by ISS-Oberlausitz */
 /* Author: T.Hojenski */
 
-var ie  = document.all;
+var ie = document.all;
 var dom = document.getElementById;
 
-function agora_popup(pf,vr,InhId) {
+function agora_popup(pf, vr, InhId) {
    if (pf == '../' || !document.getElementById('agora_popup_content')) {
-      url = pf+'agora_view.php?typ=agora&lg=de&pf=' + pf + '&' + vr + '&InhId=' + InhId;
-      opt = 'location=no,scrollbars=auto,toolbar=no,resizable=yes,left=' + ((screen.availWidth-860)/2) + ',top=' + (((screen.availHeight-700)/2)-20) + ',width=860,height=700';
-      galwindow = window.open(url,'_blank',opt);
-      galwindow.moveTo(((screen.availWidth-860)/2),((screen.availHeight-700)/2)-20)
+      url = pf + 'agora_view.php?typ=agora&lg=de&pf=' + pf + '&' + vr + '&InhId=' + InhId;
+      opt = 'location=no,scrollbars=auto,toolbar=no,resizable=yes,left=' + ((screen.availWidth - 860) / 2) + ',top=' + (((screen.availHeight - 700) / 2) - 20) + ',width=860,height=700';
+      galwindow = window.open(url, '_blank', opt);
+      galwindow.moveTo(((screen.availWidth - 860) / 2), ((screen.availHeight - 700) / 2) - 20)
    } else {
       if ((document.getElementById && !document.all) || (navigator.userAgent.indexOf('Opera') > -1)) {
-         document.getElementById('agora_popup_content').style.top           = window.pageXOffset + (window.innerHeight/2);
-         document.getElementById('agora_popup_content').style.position      = 'fixed';
+         document.getElementById('agora_popup_content').style.top = window.pageXOffset + (window.innerHeight / 2);
+         document.getElementById('agora_popup_content').style.position = 'fixed';
       } else if (document.all) {
-         document.all('bluepage_body').style.overflowY                = 'hidden';
-         document.all('bluepage').style.marginRight                   = '17px';
-         document.all('agora_popup_content').style.top                = document.body.scrollTop + ((document.body.clientHeight)/2);
+         document.all('bluepage_body').style.overflowY = 'hidden';
+         document.all('bluepage').style.marginRight = '17px';
+         document.all('agora_popup_content').style.top = document.body.scrollTop + ((document.body.clientHeight) / 2);
       }
-      agora_makeRequest('agora','de',pf,vr,InhId); 
+      agora_makeRequest('agora', 'de', pf, vr, InhId);
    }
 }
 var http_request = false;
 
-function agora_makeRequest(typ,lg,pf,vr,InhId) {
-   var url = 'incl/agora_request.ajax.php?InhId='+InhId+'&'+vr+'&pfad='+pf+'&typ='+typ+'&zh='+Math.random();
+function agora_makeRequest(typ, lg, pf, vr, InhId) {
+   var url = 'incl/agora_request.ajax.php?InhId=' + InhId + '&' + vr + '&pfad=' + pf + '&typ=' + typ + '&zh=' + Math.random();
    http_request = false;
    http_request.responseText = '';
    if (window.XMLHttpRequest) { // Mozilla, Safari,...
@@ -60,7 +60,7 @@ function agora_makeRequest(typ,lg,pf,vr,InhId) {
       } catch (e) {
          try {
             http_request = new ActiveXObject("Microsoft.XMLHTTP");
-         } catch (e) {}
+         } catch (e) { }
       }
    }
    if (!http_request) {
@@ -74,13 +74,13 @@ function agora_makeRequest(typ,lg,pf,vr,InhId) {
 function agora_requestContents() {
    if (http_request.readyState == 4) {
       if (http_request.status == 200) {
-         
-         if (http_request.getResponseHeader("Content-Type").substr(0,9) == 'text/html') {
+
+         if (http_request.getResponseHeader("Content-Type").substr(0, 9) == 'text/html') {
             document.getElementById('agora_popup_content').innerHTML = http_request.responseText;
          } else {
             var xmldoc = http_request.responseXML;
             var r_typ = xmldoc.getElementsByTagName('typ').item(0).firstChild.data;
-            if (r_typ == 'agora')         { // Galerie
+            if (r_typ == 'agora') { // Galerie
                var r_html = xmldoc.getElementsByTagName('htmlcode').item(0).firstChild.data;
                var r_html2 = xmldoc.getElementsByTagName('htmlcode2').item(0).firstChild.data;
                var r_html3 = xmldoc.getElementsByTagName('htmlcode3').item(0).firstChild.data;
@@ -91,7 +91,7 @@ function agora_requestContents() {
                document.getElementById('agora_nav3').innerHTML = r_html3;
                document.getElementById('agora_pdf').innerHTML = r_pdf;
                //document.getElementById('agora_popup_content').width = (Math.round(r_width));
-               window.resizeTo((Math.round(r_width)+70),780);
+               window.resizeTo((Math.round(r_width) + 70), 780);
             }
          }
       } else {

@@ -3,6 +3,7 @@
     --main-color: #cc0000;
     --secondary-color1: #00afc8;
     --secondary-color2: #87cdd7;
+    --secondary-color3:rgb(185, 223, 228);
     --text-color:rgb(0, 0, 0);
     --background-color: #f5f5f5;
 }
@@ -48,7 +49,6 @@ hr{
 
 /* Hierarchical Navigation */
 
-
 .nav_1 {
     margin-left: 0px;
     padding-left: 5px;
@@ -79,6 +79,13 @@ hr{
     background-color: var(--background-color);
     border-left: 10px solid var(--secondary-color2);
     display: block;
+}
+
+.nav_1:hover, .nav_1b:hover, .nav2:hover, .nav3:hover {
+    background-color: var(--secondary-color3);
+}
+.active {
+    background-color: var(--secondary-color3);
 }
 
 .bluepage_li_1:hover .nav2 {
@@ -114,8 +121,6 @@ h1 {
 .bluepage_bnr_txt {
     margin-left: 270px; /* Adjust for the sidebar */
 }
-
-
 
 
 
