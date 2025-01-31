@@ -1,3 +1,36 @@
+@font-face {
+    font-family: 'Source_Sans_3';
+    src: url('../fonts/Source_Sans_3/static/SourceSans3-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'EB_Garamond';
+    src: url('../fonts/EB_Garamond/static/EBGaramond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lustria';
+    src: url('../fonts/Lustria/Lustria-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant_Garamond';
+    src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Main Colors */
 :root {
     --main-color: #cc0000;
@@ -11,14 +44,15 @@
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: Arial, sans-serif;
+    font-family: Source_Sans_3, Montserrat, Arial, sans-serif;
+    font-size: 18px;
     display: flex;
     margin-top:130px;
     margin-bottom: 500px;
 }
 
 hr{
-    border: 1px solid var(--main-color);;
+    border: 1px solid var(--main-color);
 }
 
 /* Sidebar Navigation */
@@ -28,7 +62,7 @@ hr{
     width: 250px;
     height: calc(100vh - 130px); /* Adjust for fixed header and footer */
     position: fixed;
-    left: 0;
+    left: 300;
     top: 130px;
     overflow-y: auto;
 }
@@ -102,7 +136,8 @@ hr{
     padding: 20px;
     border-radius: 10px;
     margin: 20px;
-    margin-left: 270px; /* Adjust for the sidebar */
+    margin-left: 600px;
+    margin-right: 600px;
 }
 
 h1 {
@@ -118,8 +153,15 @@ h1 {
     color: #000;
 }
 
+.bluepage_bnr_txt, .bluepage_bnr_head_c {
+    text-align: right;
+    margin-left: 900px;
+    margin-right: 600px;
+    font-size: 18px;
+    font-family: EB_Garamond, Lustria, Cormorant_Garamond, serif;
+}
 .bluepage_bnr_txt {
-    margin-left: 270px; /* Adjust for the sidebar */
+    padding-bottom: 100px;
 }
 
 
